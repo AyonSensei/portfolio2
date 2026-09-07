@@ -198,6 +198,23 @@ footer p{color:var(--muted);font-size:.78rem;letter-spacing:1px}
   .res-doc{color:#111}
   .res-doc h2,.res-doc b{color:#000}
 }
+  /* ===== EDU HOVER POPUPS ===== */
+.tl-item h4{transition:.3s}
+.tl-pop{position:absolute;left:calc(100% + 34px);top:-10px;width:300px;z-index:60;padding:10px;background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(6px);box-shadow:0 18px 50px rgba(0,0,0,.65);clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);opacity:0;transform:translateX(-18px) scale(.92);transform-origin:left center;pointer-events:none;transition:opacity .3s ease,transform .45s cubic-bezier(.22,1,.36,1)}
+.tl-pop img{width:100%;height:170px;object-fit:cover;display:block;filter:saturate(1.05)}
+.tl-pop span{display:block;margin-top:9px;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.tl-item:hover .tl-pop{opacity:1;transform:translateX(0) scale(1)}
+.tl-item:hover h4{color:var(--cyan);text-shadow:0 0 12px rgba(0,229,255,.45)}
+@media(max-width:960px){.tl-pop{left:0;top:100%;width:min(320px,86vw);transform:translateY(10px) scale(.94);transform-origin:top left}}
+
+/* ===== PROJECT CARD ART ===== */
+.pcard{padding:0;display:flex;flex-direction:column;overflow:hidden}
+.pcard .part{position:relative;height:190px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.09);background:#0a0a13}
+.pcard .part img{width:100%;height:100%;object-fit:cover;filter:brightness(.82) saturate(.88);transition:.6s}
+.pcard:hover .part img{filter:brightness(1) saturate(1.05);transform:scale(1.08)}
+.pcard .p-tag{position:absolute;top:12px;left:12px;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);background:rgba(4,4,9,.7);padding:4px 10px;border:1px solid rgba(0,229,255,.3)}
+.pcard .part.css-art{display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.25);background:radial-gradient(circle at 30% 20%,rgba(255,46,70,.14),transparent 60%),radial-gradient(circle at 75% 80%,rgba(0,229,255,.12),transparent 55%),#0a0a13}
+.pcard .p-body{padding:34px 30px 38px}
 </style>
 </head>
 <body>
@@ -262,9 +279,15 @@ footer p{color:var(--muted);font-size:.78rem;letter-spacing:1px}
       <br>
       <p class="about-text">As a gamer, I've always found this world intriguing — <strong>games let people escape reality and experience something majestic.</strong> That feeling is what I want to build. My current quest is simple: master the fundamentals of programming and game design, and one day craft immersive worlds that give players the same wonder I've felt holding a controller.</p>
       <div class="timeline">
-        <div class="tl-item"><div class="yr">2025 — 2029 (EXPECTED)</div><h4>B.Sc. in Computer Science &amp; Engineering</h4><p>Daffodil International University · 2nd Year</p></div>
-        <div class="tl-item"><div class="yr">2022 — 2024</div><h4>Higher Secondary Certificate — GPA 5.00</h4><p>Rajuk Uttara Model College</p></div>
-        <div class="tl-item"><div class="yr">2020 — 2022</div><h4>Secondary School Certificate — GPA 5.00</h4><p>Rajuk Uttara Model College</p></div>
+       <div class="tl-item"><div class="yr">2025 — 2029 (EXPECTED)</div><h4>B.Sc. in Computer Science &amp; Engineering</h4><p>Daffodil International University · 2nd Year</p>
+  <div class="tl-pop"><img src="images/diu.jpg" alt="Daffodil International University"><span>Daffodil International University · Permanent Campus</span></div>
+</div>
+<div class="tl-item"><div class="yr">2022 — 2024</div><h4>Higher Secondary Certificate — GPA 5.00</h4><p>Rajuk Uttara Model College</p>
+  <div class="tl-pop"><img src="images/rajuk.jpg" alt="Rajuk Uttara Model College"><span>Rajuk Uttara Model College</span></div>
+</div>
+<div class="tl-item"><div class="yr">2020 — 2022</div><h4>Secondary School Certificate — GPA 5.00</h4><p>Rajuk Uttara Model College</p>
+  <div class="tl-pop"><img src="images/rajuk.jpg" alt="Rajuk Uttara Model College"><span>Rajuk Uttara Model College</span></div>
+</div>
       </div>
     </div>
     <div class="stat-grid reveal">
